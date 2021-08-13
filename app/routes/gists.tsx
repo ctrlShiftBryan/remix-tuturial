@@ -20,7 +20,15 @@ interface Gist {
 // user navigates here multiple times it won't make the request more than once
 // per 300 seconds
 export let loader: LoaderFunction = async () => {
-  let res = await fetch("https://api.github.com/gists");
+  let token = "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";
+
+  let res = await fetch("https://api.github.com/gists", {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `token ${token}`
+    }
+  });
+
   let gists = await res.json();
   return json(gists, {
     headers: {

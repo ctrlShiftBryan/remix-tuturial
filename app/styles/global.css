@@ -11,3 +11,16 @@ footer {
   color: #ccc;
   padding-top: 80px;
 }
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  animation: spin 1s infinite;
+}
+
+* {
+  background-color: aqua;
+}
