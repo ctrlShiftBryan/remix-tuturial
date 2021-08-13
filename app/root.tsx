@@ -35,7 +35,7 @@ export default function App() {
   let data = useRouteData();
   return (
     <Document>
-      <Link to="/gists">Gists</Link>
+      <Link to="/team">Team</Link>
       <Outlet />
       <footer>
         <p>This page was rendered at {data.date.toLocaleString()}</p>
